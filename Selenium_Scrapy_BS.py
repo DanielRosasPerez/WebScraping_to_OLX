@@ -55,15 +55,4 @@ class CrawlPythonProducts(CrawlSpider):
             yield item.load_item()
         
         # MORE INFO ABOUT "WEB DRIVER": "https://www.browserstack.com/guide/get-html-source-of-web-element-in-selenium-webdriver"
-        
-        """
-        selector = Selector(response)
-        containers = selector.xpath("//ul[@data-aut-id='itemsList']/li")
-        for container in containers:
-            item = ItemLoader(PythonProducts(), response)
-            item.add_value("Product", container.xpath("./a/div/span[@data-aut-id='itemTitle']/text()").get())
-            item.add_value("Price", container.xpath("./a/div/span[@data-aut-id='itemPrice']/text()").get())
-        
-            yield item.load_item()
-        """
             
